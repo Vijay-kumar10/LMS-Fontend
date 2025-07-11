@@ -22,7 +22,7 @@ const CourseCard = (course) => {
       >
         <div style={{ position: "relative", maxWidth: "100%" }}>
           <img
-            src={"http://localhost:8080/api/course/" + course.item.thumbnail}
+            src={"https://lmsbackend-production-3f74.up.railway.app/api/course/" + course.item.thumbnail}
             className="card-img-top rounded d-block"
             alt="img"
             style={{

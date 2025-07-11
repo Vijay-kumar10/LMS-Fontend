@@ -13,7 +13,7 @@ const AddCategoryForm = () => {
   const saveCategory = (e) => {
     let data = { name, description };
 
-    fetch("http://localhost:8080/api/course/category/add", {
+    fetch("https://lmsbackend-production-3f74.up.railway.app/api/course/category/add", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -34,6 +34,7 @@ const AddCategoryForm = () => {
               draggable: true,
               progress: undefined,
             });
+            
 
             setTimeout(() => {
               navigate("/home");

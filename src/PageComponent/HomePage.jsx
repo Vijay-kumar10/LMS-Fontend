@@ -18,7 +18,7 @@ const HomePage = () => {
 
   const retrieveAllCategories = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/course/category/fetch/all"
+      "https://lmsbackend-production-3f74.up.railway.app/api/course/category/fetch/all"
     );
     return response.data;
   };
@@ -58,7 +58,7 @@ const HomePage = () => {
 
   const retrieveallCourse = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/course/fetch/status-wise?status=Active&videoShow=No"
+      "https://lmsbackend-production-3f74.up.railway.app/api/course/fetch/status-wise?status=Active&videoShow=No"
     );
     return response.data;
   };
@@ -66,14 +66,14 @@ const HomePage = () => {
   const searchCourses = async () => {
     if (courseName !== "") {
       const response = await axios.get(
-        "http://localhost:8080/api/course/fetch/name-wise?videoShow=No&courseName=" +
+        "https://lmsbackend-production-3f74.up.railway.app/api/course/fetch/name-wise?videoShow=No&courseName=" +
           courseName
       );
 
       return response.data;
     } else if (eventCategoryId !== "" || eventCategoryId !== "0") {
       const response = await axios.get(
-        "http://localhost:8080/api/course/fetch/category-wise?videoShow=No&categoryId=" +
+        "https://lmsbackend-production-3f74.up.railway.app/api/course/fetch/category-wise?videoShow=No&categoryId=" +
           eventCategoryId
       );
       return response.data;

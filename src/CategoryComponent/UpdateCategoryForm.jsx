@@ -17,7 +17,7 @@ const UpdateCategoryForm = () => {
   const saveCategory = (e) => {
     let data = { id, name, description };
 
-    fetch("http://localhost:8080/api/course/category/update", {
+    fetch("https://lmsbackend-production-3f74.up.railway.app/api/course/category/update", {
       method: "PUT",
       headers: {
         Accept: "application/json",

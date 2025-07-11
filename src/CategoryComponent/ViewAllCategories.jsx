@@ -23,7 +23,7 @@ const ViewAllCategories = () => {
 
   const retrieveAllCategory = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/course/category/fetch/all"
+      "https://lmsbackend-production-3f74.up.railway.app/api/course/category/fetch/all"
     );
     console.log(response.data);
     return response.data;
@@ -31,7 +31,7 @@ const ViewAllCategories = () => {
 
   const deleteCategory = (categoryId, e) => {
     fetch(
-      "http://localhost:8080/api/course/category/delete?categoryId=" +
+      "https://lmsbackend-production-3f74.up.railway.app/api/course/category/delete?categoryId=" +
         categoryId,
       {
         method: "DELETE",

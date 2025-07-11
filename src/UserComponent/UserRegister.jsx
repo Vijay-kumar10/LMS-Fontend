@@ -35,7 +35,7 @@ const UserRegister = () => {
 
     let jwtToken;
 
-    fetch("http://localhost:8080/api/user/register", {
+    fetch("https://lmsbackend-production-3f74.up.railway.app/api/user/register", {
       method: "POST",
       headers: {
         Accept: "application/json",

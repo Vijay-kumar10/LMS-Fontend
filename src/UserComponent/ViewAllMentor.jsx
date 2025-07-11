@@ -36,7 +36,7 @@ const ViewAllMentor = () => {
 
   const retrieveAllUser = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/user/fetch/role-wise?role=Mentor",
+      "https://lmsbackend-production-3f74.up.railway.app/api/user/fetch/role-wise?role=Mentor",
       {
         headers: {
           //   Authorization: "Bearer " + admin_jwtToken, // Replace with your actual JWT token
@@ -55,7 +55,7 @@ const ViewAllMentor = () => {
   };
 
   const deleteMentor = (mentorId, e) => {
-    fetch("http://localhost:8080/api/user/mentor/delete?mentorId=" + mentorId, {
+    fetch("https://lmsbackend-production-3f74.up.railway.app/api/user/mentor/delete?mentorId=" + mentorId, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
@@ -161,7 +161,7 @@ const ViewAllMentor = () => {
         <img
           src={
             employee.mentorDetail?.profilePic
-              ? `http://localhost:8080/api/user/${employee.mentorDetail.profilePic}`
+              ? `https://lmsbackend-production-3f74.up.railway.app/api/user/${employee.mentorDetail.profilePic}`
               : "https://th.bing.com/th/id/OIP.pAyRN_lNf6IPukCMXYcRcQHaHa?w=215&h=215&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7" // default image if null
           }
           className="img-fluid"

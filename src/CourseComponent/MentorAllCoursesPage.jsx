@@ -57,7 +57,7 @@ const MentorAllCoursesPage = () => {
 
   const retrieveallCourse = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/course/fetch/mentor-wise?status=Active&videoShow=No&mentorId=" +
+      "https://lmsbackend-production-3f74.up.railway.app/api/course/fetch/mentor-wise?status=Active&videoShow=No&mentorId=" +
         mentorId
     );
     return response.data;
@@ -65,7 +65,7 @@ const MentorAllCoursesPage = () => {
 
   const retrieveUser = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/user/fetch/user-id?userId=" + mentorId
+      "https://lmsbackend-production-3f74.up.railway.app/api/user/fetch/user-id?userId=" + mentorId
     );
     return response.data;
   };
@@ -84,7 +84,7 @@ const MentorAllCoursesPage = () => {
               <div className="d-flex align-items-center justify-content-center">
                 <img
                   src={
-                    "http://localhost:8080/api/user/" +
+                    "https://lmsbackend-production-3f74.up.railway.app/api/user/" +
                     user.mentorDetail.profilePic
                   }
                   className="card-img-top mentor-profile-photo mt-3 rounded-circle"

@@ -125,7 +125,7 @@ const AddCourseSectionForm = () => {
 
       return;
     } else {
-      fetch("http://localhost:8080/api/course/section/add", {
+      fetch("https://lmsbackend-production-3f74.up.railway.app/course/section/add", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -229,7 +229,7 @@ const AddCourseSectionForm = () => {
       formData.append("video", selectedTopicVideo);
 
       axios
-        .post("http://localhost:8080/api/course/section/topic/add", formData, {
+        .post("https://lmsbackend-production-3f74.up.railway.app/api/course/section/topic/add", formData, {
           headers: {
             //    Authorization: "Bearer " + admin_jwtToken, // Replace with your actual JWT token
           },
@@ -410,7 +410,7 @@ const AddCourseSectionForm = () => {
                                 <p className="mt-3">{topic.description}</p>
                                 <video
                                   controls
-                                  src={`http://localhost:8080/api/course/video/${topic.videoFileName}`}
+                                  src={`https://lmsbackend-production-3f74.up.railway.app/api/course/video/${topic.videoFileName}`}
                                   className="w-100 mt-3"
                                 />
                               </div>
@@ -427,7 +427,7 @@ const AddCourseSectionForm = () => {
             <div style={{ display: "flex", alignItems: "center" }}>
               <img
                 src={
-                  "http://localhost:8080/api/user/" +
+                  "https://lmsbackend-production-3f74.up.railway.app/api/user/" +
                   course.mentor.mentorDetail.profilePic
                 }
                 className="card-img-top profile-photo mt-3 rounded-circle"
@@ -478,7 +478,7 @@ const AddCourseSectionForm = () => {
             >
               <div style={{ position: "relative", maxWidth: "100%" }}>
                 <img
-                  src={"http://localhost:8080/api/course/" + course.thumbnail}
+                  src={"https://lmsbackend-production-3f74.up.railway.app/api/course/" + course.thumbnail}
                   className="card-img-top rounded d-block"
                   alt="img"
                   style={{

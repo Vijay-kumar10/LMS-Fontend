@@ -13,7 +13,7 @@ const AddCourseForm = () => {
 
   const retrieveAllCategories = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/course/category/fetch/all"
+      "https://lmsbackend-production-3f74.up.railway.app/api/course/category/fetch/all"
     );
     return response.data;
   };
@@ -108,7 +108,7 @@ const AddCourseForm = () => {
     formData.append("mentorId", course.mentorId);
 
     axios
-      .post("http://localhost:8080/api/course/add", formData, {
+      .post("https://lmsbackend-production-3f74.up.railway.app/api/course/add", formData, {
         headers: {
           //    Authorization: "Bearer " + admin_jwtToken, // Replace with your actual JWT token
         },

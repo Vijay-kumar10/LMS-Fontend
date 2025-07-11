@@ -37,7 +37,7 @@ const AddProfile = () => {
     formData.append("mentorId", mentor.id);
 
     axios
-      .put("http://localhost:8080/api/user/mentor/detail/update", formData, {
+      .put("https://lmsbackend-production-3f74.up.railway.app/api/user/mentor/detail/update", formData, {
         headers: {
           //    Authorization: "Bearer " + admin_jwtToken, // Replace with your actual JWT token
         },

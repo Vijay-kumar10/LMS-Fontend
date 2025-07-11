@@ -23,7 +23,7 @@ const MentorProfile = () => {
 
   const retrieveUser = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/user/fetch/user-id?userId=" + mentor.id
+      "https://lmsbackend-production-3f74.up.railway.app/api/user/fetch/user-id?userId=" + mentor.id
     );
     return response.data;
   };
@@ -49,7 +49,7 @@ const MentorProfile = () => {
                     return (
                       <img
                         src={
-                          "http://localhost:8080/api/user/" +
+                          "https://lmsbackend-production-3f74.up.railway.app/api/user/" +
                           mentor.mentorDetail.profilePic
                         }
                         className="card-img-top mentor-profile-photo mt-3 rounded-circle"

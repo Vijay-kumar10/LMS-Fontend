@@ -24,7 +24,7 @@ const ViewMentorCourses = () => {
 
   const retrieveAllCourse = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/course/fetch/mentor-wise?status=Active&videoShow=Yes&mentorId=" +
+      "https://lmsbackend-production-3f74.up.railway.app/api/course/fetch/mentor-wise?status=Active&videoShow=Yes&mentorId=" +
         mentor.id
     );
     console.log(response.data);
@@ -32,7 +32,7 @@ const ViewMentorCourses = () => {
   };
 
   const deleteCourse = (courseId, e) => {
-    fetch("http://localhost:8080/api/course/delete?courseId=" + courseId, {
+    fetch("https://lmsbackend-production-3f74.up.railway.app/api/course/delete?courseId=" + courseId, {
       method: "DELETE",
       headers: {
         Accept: "application/json",
@@ -144,7 +144,7 @@ const ViewMentorCourses = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/course/" +
+                            "https://lmsbackend-production-3f74.up.railway.app/api/course/" +
                             course.thumbnail
                           }
                           class="img-fluid"

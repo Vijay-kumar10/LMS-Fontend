@@ -95,7 +95,7 @@ const CourseBookingPage = () => {
       course.discountInPercent,
       course.fee
     );
-    fetch("http://localhost:8080/api/course/booking/add", {
+    fetch("https://lmsbackend-production-3f74.up.railway.app/api/course/booking/add", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -161,7 +161,7 @@ const CourseBookingPage = () => {
     let customerId = customer && customer !== null ? customer.id : 0;
 
     const response = await axios.get(
-      "http://localhost:8080/api/course/fetch/course-user-id?courseId=" +
+      "https://lmsbackend-production-3f74.up.railway.app/api/course/fetch/course-user-id?courseId=" +
         courseId +
         "&userId=" +
         customerId
@@ -294,7 +294,7 @@ const CourseBookingPage = () => {
             >
               <div style={{ position: "relative", maxWidth: "100%" }}>
                 <img
-                  src={"http://localhost:8080/api/course/" + course.thumbnail}
+                  src={"https://lmsbackend-production-3f74.up.railway.app/api/course/" + course.thumbnail}
                   className="card-img-top rounded d-block"
                   alt="img"
                   style={{

@@ -27,7 +27,7 @@ const UserLoginForm = () => {
     e.preventDefault();
     setIsSendingOtp(true);
 
-    fetch("http://localhost:8080/api/user/sendOtp", {
+    fetch("https://lmsbackend-production-3f74.up.railway.app/api/user/sendOtp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(loginRequest),
@@ -61,7 +61,7 @@ const UserLoginForm = () => {
   };
 
    const loginAction = (e) => {
-      fetch("http://localhost:8080/api/user/login", {
+      fetch("https://lmsbackend-production-3f74.up.railway.app/api/user/login", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -251,7 +251,7 @@ const UserLoginForm = () => {
                 {/* Google Login */}
                 {/* <div className="d-flex justify-content-center mb-2">
                   <a
-                    href="http://localhost:8080/oauth2/authorization/google"
+                    href="https://lmsbackend-production-3f74.up.railway.app/oauth2/authorization/google"
                     className="btn google-btn mb-2"
                   >
                     <img
@@ -266,7 +266,7 @@ const UserLoginForm = () => {
                 {/* GitHub Login */}
                 {/* <div className="d-flex justify-content-center mb-3">
                   <a
-                    href="http://localhost:8080/oauth2/authorization/github"
+                    href="https://lmsbackend-production-3f74.up.railway.app/oauth2/authorization/github"
                     className="btn google-btn mb-2"
                   >
                     <img

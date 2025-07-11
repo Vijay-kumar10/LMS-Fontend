@@ -23,7 +23,7 @@ const ViewCustomerCourse = () => {
 
   const retrieveAllBooking = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/course/booking/fetch/customer-wise?customerId=" +
+      "https://lmsbackend-production-3f74.up.railway.app/api/course/booking/fetch/customer-wise?customerId=" +
         customer.id
     );
     console.log(response.data);
@@ -92,7 +92,7 @@ const ViewCustomerCourse = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/course/" +
+                            "https://lmsbackend-production-3f74.up.railway.app/api/course/" +
                             booking.course.thumbnail
                           }
                           class="img-fluid"

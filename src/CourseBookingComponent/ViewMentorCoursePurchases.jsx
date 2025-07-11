@@ -23,7 +23,7 @@ const ViewMentorCoursePurchases = () => {
 
   const retrieveAllBooking = async () => {
     const response = await axios.get(
-      "http://localhost:8080/api/course/booking/fetch/mentor-wise?mentorId=" +
+      "https://lmsbackend-production-3f74.up.railway.app/api/course/booking/fetch/mentor-wise?mentorId=" +
         mentor.id
     );
     console.log(response.data);
@@ -83,7 +83,7 @@ const ViewMentorCoursePurchases = () => {
                       <td>
                         <img
                           src={
-                            "http://localhost:8080/api/course/" +
+                            "https://lmsbackend-production-3f74.up.railway.app/api/course/" +
                             booking.course.thumbnail
                           }
                           class="img-fluid"

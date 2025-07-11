@@ -76,7 +76,7 @@ const PurchasedCourseDetail = () => {
     const getCourse = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/course/fetch/course-id?videoShow=Yes&courseId=${courseId}`
+          `https://lmsbackend-production-3f74.up.railway.app/api/course/fetch/course-id?videoShow=Yes&courseId=${courseId}`
         );
         setCourse(response.data.course);
       } catch (error) {
@@ -114,7 +114,7 @@ const PurchasedCourseDetail = () => {
   const downloadNotes = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/course/notes/${course.notesFileName}/download`,
+        `https://lmsbackend-production-3f74.up.railway.app/api/course/notes/${course.notesFileName}/download`,
         {
           responseType: "blob", // Important to handle binary data
         }
@@ -147,7 +147,7 @@ const PurchasedCourseDetail = () => {
             <h3 className="mt-2">Trainer</h3>
             <div style={{ display: "flex", alignItems: "center" }}>
               <img
-                src={`http://localhost:8080/api/user/${course.mentor.mentorDetail.profilePic}`}
+                src={`https://lmsbackend-production-3f74.up.railway.app/api/user/${course.mentor.mentorDetail.profilePic}`}
                 className="card-img-top profile-photo mt-3 rounded-circle"
                 alt="profile_pic"
               />
@@ -247,7 +247,7 @@ const PurchasedCourseDetail = () => {
                                 <p className="mt-3">{topic.description}</p>
                                 <video
                                   controls
-                                  src={`http://localhost:8080/api/course/video/${topic.videoFileName}`}
+                                  src={`https://lmsbackend-production-3f74.up.railway.app/api/course/video/${topic.videoFileName}`}
                                   className="w-100 mt-3"
                                 />
                               </div>
